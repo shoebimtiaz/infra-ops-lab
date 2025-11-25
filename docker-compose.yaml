@@ -5,7 +5,7 @@ services:
      container_name: sqlserver
      environment:
        - ACCEPT_EULA=Y
-       - SA_PASSWORD=
+       - SA_PASSWORD=DevOps#2025$DB
      ports:
        - "1433:1433"
      volumes:
