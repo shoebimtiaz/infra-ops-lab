@@ -1,0 +1,29 @@
+# .NET / Visual Studio
+**/bin/
+**/obj/
+*.user
+*.suo
+*.csproj.user
+
+# Node / Angular
+node_modules/
+dist/
+npm-debug.log
+yarn-error.log
+
+# Docker
+*.env
+docker-compose.override.yml
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Logs
+*.log
+
+# Misc
+.vscode/
+.idea/
+
