@@ -12,6 +12,21 @@ services:
      volumes:
        - sqlserver-data:/var/opt/mssql
 
+   api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: steadtler_api
+    depends_on:
+      - sqlserver
+    environment:
+      ASPNETCORE_URLS: "http://+:8080"
+      ConnectionStrings__DefaultConnection: "Server=sqlserver,1433;Database=EmployeeDB;User ID=sa;Password=DevOpsDB#Nov25;TrustServerCertificate=True"
+    ports:
+      - "8080:8080"
+    restart: always
+
+
 volumes:
   sqlserver-data:
 
