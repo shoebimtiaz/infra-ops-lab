@@ -6,8 +6,8 @@ resource "azurerm_storage_account" "storage_account" {
   account_replication_type = "LRS"
 }
 
-resource "azurerm_storage_container" "logs_container" {
-    name = "logs"
+resource "azurerm_storage_container" "uploads_container" {
+    name = "uploads"
     storage_account_id = azurerm_storage_account.storage_account.id
     container_access_type = "private"
 }
