@@ -17,3 +17,9 @@ resource "azurerm_resource_group" "dev_rg" {
   location = "Central US"
 }
 
+resource "azurerm_user_assigned_identity" "dev_identity" {
+    name = "dev-identity"
+    resource_group_name = azurerm_resource_group.dev_rg.name
+    location = azurerm_resource_group.dev_rg.location
+}
+
